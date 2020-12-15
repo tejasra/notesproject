@@ -11,7 +11,6 @@ router.get("/:id", checkSession, (req, res) => {
     .query("SELECT * FROM notes where id=$1", [req.params.id])
     .then((result) => {
       res.render("edit", { notes: result.rows });
-      console.log(result.rows);
     })
     .catch((err) => {
       res.status(404).send(err);
