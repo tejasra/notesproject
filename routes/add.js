@@ -20,7 +20,6 @@ router.post("/", (req, res) => {
       req.body.description,
     ])
     .then(() => {
-      console.log("The Notes added...");
       res.redirect("/");
     })
     .catch((err) => {
