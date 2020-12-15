@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Notes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-4 p-5">
+        <h1 class="mb-4">Edit The content</h1>
+        <%  notes.forEach(note=>{%>
+        <form action="/edit/<%=note.id%>" method="POST">
+            <div class="form-group">
+                <label for="Name" class=" mb-2">Edit the Title</label>
+                <input type="text" class="form-control mb-2" id="name" name="title" value="<%=note.title%>" name="title"
+                    required autocomplete="off">
+            </div>
+            <div class="form-group  mb-2">
+                <label for="exampleInputEmail1" class=" mb-2">Edit Description</label>
+                <textarea id="desc" name="data" required class="form-control  mb-2"><%=note.data%></textarea>
+
+            </div>
+            <button type="submit" class="btn btn-success mt-4">save</button>
+            <a href="/" class="btn btn-danger mt-4 pb-2 pl-4">Cancel </a>
+            <%})%>
+        </form>
+    </div>
+</body>
+
+</html>
