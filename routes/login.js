@@ -6,7 +6,6 @@ const crypto = require("crypto");
 const secret = "tejasravi";
 
 router.get("/", (req, res) => {
-  console.log(req.session);
   res.render("login");
 });
 
