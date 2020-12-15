@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Notes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-4 p-5">
+        <h1 class="mb-4">Register Here</h1>
+        <form action="/addnote" method="POST">
+            <div class="form-group">
+                <label for="Name">Enter the Title</label>
+                <input type="text" class="form-control" id="name" name="title" required autocomplete="off">
+
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Enter Description</label>
+                <textarea name="description" id="desc" name="data" required class="form-control"></textarea>
+
+            </div>
+            <button type="submit" class="btn btn-success mt-4">Add Note</button>
+            <a href="/" class="btn btn-danger mt-4 pb-2 pl-4">Cancel </a>
+        </form>
+    </div>
+</body>
+
+</html>
