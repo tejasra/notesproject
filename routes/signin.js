@@ -34,7 +34,6 @@ router.post("/", (req, res) => {
       password,
     ])
     .then(() => {
-      console.log("The user added...");
       req.session.user = req.body.userName;
       res.redirect("/");
     })
