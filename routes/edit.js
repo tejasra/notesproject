@@ -18,7 +18,6 @@ router.get("/:id", checkSession, (req, res) => {
 });
 
 router.post("/:id", checkSession, (req, res) => {
-  console.log("inside update");
   !client._connected ? client.connect() : null;
   client
     .query("UPDATE NOTES SET TITLE=$1,DATA=$2,DATE=$3 WHERE ID=$4", [
